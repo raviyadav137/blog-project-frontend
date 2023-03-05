@@ -1,0 +1,35 @@
+                                                                         Context Api
+    >App.js
+             Code:
+                  import './App.css';
+import React,{createContext,useState} from 'react';
+import Student from './Student'
+const data=createContext();
+function App() {
+  const [color]=useState("green")
+  return (
+    <>
+    <data.Provider value={{appColor:color}}>
+      <Student/>
+    </data.Provider>
+    </>
+  );
+}
+
+export default App;
+export {data}
+   
+     >Student.js
+                Code:
+                import React,{useContext} from 'react'
+import {data} from './App'
+function Student(){
+    const {appColor}=useContext(data);
+    console.warn("appColor",appColor)
+    return(
+        <>
+        <h1 style={{color:appColor}}>ffgfgf</h1>
+        </>
+    )
+}
+export default Student  
