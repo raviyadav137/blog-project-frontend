@@ -10,9 +10,9 @@ const Hollywood = () => {
     const [value,setValue]=useState([]);
     console.log(value);
     useEffect(()=>{
-        const url="http://localhost:4000/holly"
+        const url="https://blogbackend-mgez.onrender.com/holly"
         fetch(url).then(res=>res.json())
-            .then(res => setValue(res))
+            .then((res) => setValue(res))
      },[])
     return (
         <div>

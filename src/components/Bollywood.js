@@ -1,22 +1,21 @@
 import React, { useState,useEffect } from 'react'
 import Nav from './Nav'
 //import { store } from './Details'
-import Header from './Header'
+import Header from './Header' 
 import Card from './Card'
 import Card2 from './Card2';
 
 const Bollywood = () => {
     //const [details] = useContext(store);
-   const[value,setValue]=useState([])
-     useEffect(()=>{
-        const url="http://localhost:4000/bolly"
-        fetch(url).then(res=>res.json())
-            .then(res => setValue(res))
-     },[])
+    const [value,setValue]=useState([]);
+    console.log(value);
+    useEffect(()=>{
+      const url="https://blogbackend-mgez.onrender.com/bolly";
+      fetch(url).then(res=>res.json())
+           .then((res)=>setValue(res))
+    },[])
 
-
-
-    return (
+     return (
         
         <div>
             <Header/>

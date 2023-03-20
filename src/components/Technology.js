@@ -11,9 +11,9 @@ export const Technology = () => {
     const[value,setValue]=useState([]);
     console.log(value);
     useEffect(()=>{
-        const url="http://localhost:4000/technology"
+        const url="https://blogbackend-mgez.onrender.com/technology"
         fetch(url).then(res=>res.json())
-            .then(res=>setValue(res))
+            .then((res)=>setValue(res))
     })
 
    

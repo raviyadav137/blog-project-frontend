@@ -10,9 +10,9 @@ const Fitness = () => {
   const [value,setValue]=useState([]);
     console.log(value);
     useEffect(()=>{
-      const url="http://localhost:4000/fitness";
+      const url="https://blogbackend-mgez.onrender.com/fitness";
       fetch(url).then(res=>res.json())
-           .then(res=>setValue(res))
+           .then((res)=>setValue(res))
     },[])
     return (
         <div>
